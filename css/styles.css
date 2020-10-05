@@ -1,0 +1,37 @@
+.row-header
+{
+    margin: 0px auto;
+    padding: 0px
+}
+
+.row-content
+{
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+
+    /* The min-height property defines the minimum height of an element. If the content is smaller than the minimum height,
+    the minimum height will be applied. If the content is larger than the minimum height, the min-height property has no effect 
+    */
+}
+
+.footer{
+    background-color: #d1c4e9;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron
+{
+    padding: 70px 30px 70px 30 px;
+    margin: 0px auto;
+    background: #9575CD;
+    color: floralwhite;
+}
+
+address{
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
+}

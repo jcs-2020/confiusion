@@ -174,14 +174,11 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a  role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="tooltip" data-html="true"
-                        title="Or Call us at <br><strong>+852 12345678</strong>"
-                        data-placement="bottom"
-                        href="#reserveform"
-                        >
-                        Reserve Table
-                    </a>
+                    <span class="navbar-text">
+                        <a data-toggle="modal" data-target="#reserveModal" role="button" class="btn btn-sm btn-warning btn-block">
+                            Reserve Table
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
@@ -254,63 +251,88 @@
                 </div>
             </div>
         </div>
-        <!-- Starts here-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Reserve Table</h4>
-          <button class="close" type="button" data-dismiss="modal">
-            &times;
-          </button>
-        </div>
-        <div class="modal-body">
-          <form id="reserveform">
-            <div class="form-group row">
-                <div class="col-auto ml-3">
-                    <span id="">Number of Guests</span>
-                </div>
-                <div class="col-12 col-sm pb-3">
-                    <label class="radio-inline"><input type="radio" name="optradio"> 1</label>
-                    <label class="radio-inline"><input type="radio" name="optradio"> 2</label>
-                    <label class="radio-inline"><input type="radio" name="optradio"> 3</label>
-                    <label class="radio-inline"><input type="radio" name="optradio"> 4</label>
-                    <label class="radio-inline"><input type="radio" name="optradio"> 5</label>
-                    <label class="radio-inline"><input type="radio" name="optradio"> 6</label>
-                </div>
+<!-- Reserve Table Modal Starts here-->
+<!-- Log In Modal-->
+<div id="reserveModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <!-- Modal Content -->
+        <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Reserve Table</h4>
+              <button type="button" class="close" type="button" data-dismiss="modal" aria-label="close">
+                &times;
+              </button>
             </div>
-            <div class="form-group row">
-                <div class="col-auto ml-3">
-                    <span id="">Date and Time</span>
-                </div>      
-                <div class="col-12 col-sm">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="input-group">
-                                <input type='date' class="form-control" />
-                                <span class="input-group-addon">
-                                </span> 
+            <div class="modal-body">
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <div class="col-auto ml-3">
+                                <span id="">Number of 
+                                    Guests</span>
+                            </div>
+                            <div class="col-auto">
+                                <label class="radio-inline"><input type="radio" name="optradio"> 1</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 2</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 3</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 4</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 5</label>
+                                <label class="radio-inline"><input type="radio" name="optradio"> 6</label>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="input-group">
-                                <input type='time' class="form-control" name="time"/>
-                                <span class="input-group-addon">
-                                </span>
+                        <div class="input-group row">
+                            <div class="col-auto col-4 ml-3 pb-4">
+                                <span id="col-auto ml-3">Section </span>
+                            </div>
+                            <div class="btn-group col-sm-auto" data-toggle="buttons">
+                                <label class="btn btn-success active col-sm-auto">
+                                    <input type="radio" name="options" id="optionNonSmoking" autocomplete="off"> Non-Smoking
+                                </label>
+                                <label class="btn btn-danger col-sm-auto">
+                                    <input type="radio" name="options" id="optionSmoking" autocomplete="off"> Smoking
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3 ml-3">
+                                <span id="">Date and Time</span>
+                            </div>      
+                            <div class="col-sm-6 col-sm">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <input type='date' class="form-control" />
+                                            <span class="input-group-addon">
+                                            </span> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <input type='time' class="form-control" name="time"/>
+                                            <span class="input-group-addon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Reserve</button>                                
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                    
             </div>
-
-            <div class="form-group row">
-              <div class="offset-md-2 col-md-10">
-                <button type="submit" class="btn btn-primary ml-1">
-                  Reserve
-                </button>
-              </div>
-            </div>
-          </form>
         </div>
-      </div>
+    </div>
+    </div>
+</div>
+
+    
+      
 <!-- Ends here-->
         
     </div>
@@ -382,7 +404,7 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function(){
-        $('[data-toggle="tooltop"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
 </body>

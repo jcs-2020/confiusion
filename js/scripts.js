@@ -1,4 +1,4 @@
-
+$(function(){
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
     });
@@ -26,3 +26,4 @@
     $('#login-Btn').click(function (){
         $('#loginModal').modal('toggle');
     });
+});
